@@ -1,0 +1,46 @@
+
+body {
+    background-image: url("../image/background.jpg");
+    background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: 100%}
+
+.text {font-size: 20px;
+	color: black;
+	line-height: 1.5;
+	text-indent: 30px;
+	border-left : 3px solid;
+	border-right: 3px solid;
+	padding: 13px}
+h1 {color : red !important ;
+	font-size: 45px !important;}
+
+#menu {max-width: 20%;
+		position: absolute;
+		top :60px;
+		left: 0;
+		border-bottom: 2px solid; }
+#menu a {display : block;
+		font-size:28px;
+		color : black;}
+#menu a:link {color: black;
+		text-decoration: none}
+	a:hover {color: red !important;
+		font-weight: bold}
+	a:visited {color: black;}
+		
+.title {font-weight: bold;
+		font-size: 35px;
+		text-align: center;
+		color: brown;}
+p {max-width: 100%}
+
+img {max-width: 100%}
+
+
+
+.warp {max-width: 1000px;
+		margin: auto;}
+#button {position: fixed;
+		bottom: 50px;
+		right: 50px;}
