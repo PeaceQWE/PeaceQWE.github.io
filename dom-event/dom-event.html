@@ -1,0 +1,66 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="dom-event.css">
+	<title>Calculator</title>
+</head>
+<body>
+	
+	<div id = "wrap">
+		<div>
+			<h1>Calculator</h1>
+			<p id ="backcalcu"></p>
+			<input type="text" id ="inputBox"/>			
+		</div>
+		<div id="buttonbox">
+			<button class="button" onclick="press(this)">(</button>
+			<button class="button" onclick="press(this)">)</button>
+			<button class="button" onclick="erase()">C</button><br/>	
+			<button class="button" onclick="press(this)" style="background-color: #CCCCCC">7</button>
+			<button class="button" onclick="press(this)" style="background-color: #CCCCCC">8</button>
+			<button class="button" onclick="press(this)" style="background-color: #CCCCCC">9</button><br/>
+			<button class="button" onclick="press(this)" style="background-color: #CCCCCC">4</button>
+			<button class="button" onclick="press(this)" style="background-color: #CCCCCC">5</button>	
+			<button class="button" onclick="press(this)" style="background-color: #CCCCCC">6</button><br/>
+			<button class="button" onclick="press(this)" style="background-color: #CCCCCC">1</button>
+			<button class="button" onclick="press(this)" style="background-color: #CCCCCC">2</button>
+			<button class="button" onclick="press(this)" style="background-color: #CCCCCC">3</button><br/>
+			<button class="button" onclick="press(this)" style="background-color: #CCCCCC">0</button>		
+			<button class="button" onclick="press(this)">+</button>
+			<button class="button" onclick="result()">=</button><br/>			
+			<button class="button" onclick="press(this)">/</button>
+			<button class="button" onclick="press(this)">*</button>
+			<button class="button" onclick="press(this)">-</button>
+		</div>
+	</div>
+	<script>
+		z = "";	var testnumber 	
+		
+		
+		function erase() {
+			document.getElementById("inputBox").value ="";
+			z ="";
+		}
+
+		function result() {
+			document.getElementById("backcalcu").innerText=document.getElementById("inputBox").value + "="
+			a = document.getElementById("inputBox").value;
+			document.getElementById("inputBox").value = eval(z+a);
+			z ="";
+			testnumber = 1;
+
+		}
+
+		function press(x) {
+			if (testnumber == 1) {
+				document.getElementById("inputBox").value ="";
+				testnumber = 0
+			}
+			document.getElementById("inputBox").value += x.innerHTML;
+		}
+
+
+	</script>
+</body>
+
+</html>
